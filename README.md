@@ -1,50 +1,50 @@
-# Descrição do Modelo de Machine Learning: Previsão de Fraudes
+# Descrição do Modelo de Machine Learning: Detecção de Fraudes no Setor de Empréstimos
 
 # 1. Definição do Problema:
 
-   ### O objetivo principal é desenvolver um modelo capaz de prever os preços de imóveis com base em diversas variáveis, como tamanho, número de quartos, localização, etc. Isso auxiliará compradores, vendedores e corretores imobiliários a tomarem decisões mais informadas.
+ ###   O objetivo principal é desenvolver um modelo capaz de identificar possíveis fraudes no setor de empréstimos, visando reduzir as perdas financeiras e fortalecer a segurança nas transações.
 
 # 2. Coleta de Dados:
 
-   ### Os dados foram obtidos de fontes diversas, incluindo registros de transações imobiliárias, informações de listagens online e dados públicos sobre características do bairro.
+###    Os dados foram obtidos a partir de registros de transações de empréstimos anteriores, incluindo informações sobre clientes, histórico de transações, e indicadores de comportamento suspeito.
 
 # 3. Exploração e Análise de Dados:
 
-   ### Realizamos uma análise exploratória para entender a distribuição dos preços, identificar correlações entre variáveis e detectar possíveis outliers que poderiam distorcer o modelo.
+  ###  Realizamos uma análise exploratória para entender a distribuição das variáveis, identificar padrões de comportamento típicos e atípicos, além de explorar relações entre variáveis que possam indicar atividades fraudulentas.
 
 # 4. Pré-processamento de Dados:
 
-   ### Lidamos com valores ausentes e outliers.
-   ### Normalizamos as características para garantir que todas tenham uma escala comparável.
+ ###   Tratamos valores ausentes e realizamos técnicas específicas para lidar com desequilíbrio de classes, comum em problemas de detecção de fraudes.
+ ###   Normalizamos e escalamos as variáveis para garantir que o modelo seja robusto a diferentes escalas.
 
 # 5. Divisão dos Dados:
 
-   ### Os dados foram divididos em 80% para treinamento e 20% para teste, garantindo que o modelo seja avaliado em dados não vistos durante o treinamento.
+  ###  Os dados foram divididos em conjuntos de treinamento e teste, com atenção especial para manter a proporção adequada de exemplos de fraudes e não fraudes em ambos os conjuntos.
 
 # 6. Escolha do Modelo:
 
-   ### Optamos por usar uma regressão linear, dado que o problema é de natureza regressiva e queremos estimar um valor contínuo (o preço).
+ ###   Optamos por utilizar um modelo de classificação, como Random Forest ou Support Vector Machine, dada a natureza do problema de detecção de fraudes.
 
 # 7. Treinamento do Modelo:
 
-   ### O modelo foi treinado no conjunto de treinamento, ajustando os pesos das variáveis para minimizar o erro médio quadrático.
+ ###   O modelo foi treinado no conjunto de treinamento, ajustando seus parâmetros para maximizar a sensibilidade na detecção de fraudes, minimizando falsos negativos.
 
 # 8. Avaliação do Modelo:
 
-   ### Avaliamos o desempenho do modelo no conjunto de teste, utilizando métricas como o erro médio absoluto e o coeficiente de determinação (R²).
+  ###  Avaliamos o desempenho do modelo no conjunto de teste, utilizando métricas como precisão.
 
 # 9. Ajuste do Modelo (Otimização):
 
-   ### Realizamos ajustes finos nos parâmetros do modelo para melhorar seu desempenho, usando validação cruzada para evitar overfitting.
+  ###  Realizamos ajustes finos nos parâmetros do modelo, considerando o trade-off entre a sensibilidade na detecção de fraudes e a especificidade na identificação de transações legítimas.
 
 # 10. Validação do Modelo:
 
-   ### Validamos o modelo com novos dados para garantir que ele generalize bem em situações do mundo real.
+  ###  Validamos o modelo com novos dados simulando casos de fraude para garantir que ele seja capaz de generalizar para situações não vistas durante o treinamento.
 
 # 11. Implantação do Modelo:
 
-   ### O modelo foi implementado em uma aplicação web, permitindo aos usuários inserir informações sobre um imóvel e obter uma estimativa de preço.
+ ###   Implementamos o modelo em um sistema de monitoramento em tempo real para avaliar transações em tempo real, auxiliando na tomada de decisões instantâneas sobre a autenticidade das transações.
 
 # 12. Monitoramento e Manutenção:
 
-   ### Implementamos um sistema de monitoramento contínuo para rastrear o desempenho do modelo em produção e estamos preparados para atualizá-lo conforme necessário.
+  ###  Estabelecemos um sistema de monitoramento contínuo para acompanhar o desempenho do modelo em produção, atualizando-o conforme necessário para adaptar-se a padrões de fraude em constante evolução.
